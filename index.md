@@ -4,8 +4,6 @@ title: Hello, Cat!
 
 # Hello to all the cats in the world!
 
-yep and yep and yep.
-
 Lets see if this is still working. hmmm.
 
 Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
