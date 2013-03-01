@@ -16,17 +16,30 @@ Donec libero libero, bibendum non condimentum ac, ullamcorper at sapien. Du\
 is feugiat urna vel justo cursus facilisis. Vivamus ligula dui, convallis a\
 varius vitae, facilisis eget magna.
 
-	```background-color:red;
-	color: transparent;
-	padding: 0 0 0 0```
+```css
+background-color:red;
+color: transparent;
+padding: 0 0 0 0;
+```
 
 # Here we start to pray cats...!
 
 `git push --hard`
+{: .bash}
 
 then we do the following steps:
+{: .yep}
 
 1. `git fetch --no-ff`
 2. `git rebase -p`
 3. `git psuh yourserver`
 4. go have a coffee or whatever you would like my friend.
+{: .class1 .class2}
+
+---
+
+# Well... we're on our way.
+
+##coolest ever.
+
+	background:(url'');
