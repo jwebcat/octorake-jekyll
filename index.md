@@ -4,8 +4,6 @@ title: Hello, Cat!
 
 # Hello to all the cats in the world!
 
-Lets see if this is still working. hmmm.
-
 Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
 Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, pl\
 acerat vel vestibulum vel, dapibus quis libero.
@@ -21,8 +19,9 @@ padding: 0 0 0 0;
 `git push --hard`
 {: .bash}
 
-then we do the following steps:
+then we do the following steps yepola:
 {: .yep}
+
 
 1. `git fetch --no-ff`
 2. `git rebase -p`
