@@ -1,5 +1,6 @@
 ---
-title: Hello, Cat!
+title: Hello, Catz
+layout: default
 ---
 
 # Hello to all the cats in the world!
@@ -8,15 +9,17 @@ Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
 Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, pl\
 acerat vel vestibulum vel, dapibus quis libero.
 
-```css
-background-color:red;
+```scss
+background-color: #26a2cb;
 color: transparent;
 padding: 0 0 0 0;
 ```
 
 # Here we start to pray cats...!
 
-`git push --hard`
+```bash
+git push --hard
+```
 {: .bash}
 
 then we do the following steps yepola:
@@ -33,4 +36,6 @@ then we do the following steps yepola:
 
 ##coolest ever.
 
-	background:(url'');
+```bash
+background:(url'');
+```
