@@ -29,8 +29,6 @@ then we do the following steps yepola:
 4. go have a coffee or whatever you would like my friend.
 {: .class1 .class2}
 
----
-
 # Well... we're on our way.
 
 ##coolest ever.
