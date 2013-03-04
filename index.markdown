@@ -9,22 +9,21 @@ Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
 Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, pl\
 acerat vel vestibulum vel, dapibus quis libero.
 
-```scss
+~~~css
 background-color: #26a2cb;
 color: transparent;
 padding: 0 0 0 0;
-```
+~~~
 
 # Here we start to pray cats...!
 
-```bash
-git push --hard
-```
+~~~bash
+$ git push --hard
+~~~
 {: .bash}
 
 then we do the following steps yepola:
 {: .yep}
-
 
 1. `git fetch --no-ff`
 2. `git rebase -p`
@@ -36,6 +35,6 @@ then we do the following steps yepola:
 
 ##coolest ever.
 
-```bash
-background:(url'');
-```
+~~~bash
+$ ls -la
+~~~

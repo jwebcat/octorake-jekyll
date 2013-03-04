@@ -15,8 +15,10 @@
 .highlight .cp { color: #75715e !important; } /* Comment.Preproc */
 .highlight .c1 { color: #75715e !important; } /* Comment.Single */
 .highlight .cs { color: #75715e !important; } /* Comment.Special */
-.highlight .ge { } /* Generic.Emph */
-.highlight .gs { } /* Generic.Strong */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #18B218; font-weight: bold } /* Generic.Prompt */
+.highlight .ge { color: #ae81ff } /* Generic.Emph */
+.highlight .gs { color: #66d9ef } /* Generic.Strong */
 .highlight .kc { color: #66d9ef !important; } /* Keyword.Constant */
 .highlight .kd { color: #66d9ef !important; } /* Keyword.Declaration */
 .highlight .kn { color: #f92672 !important; } /* Keyword.Namespace */
