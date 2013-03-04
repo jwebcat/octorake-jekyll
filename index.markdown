@@ -9,17 +9,19 @@ Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
 Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, pl\
 acerat vel vestibulum vel, dapibus quis libero.
 
-background-color: #26a2cb;
-color: transparent;
-padding: 0 0 0 0;
+
+	background-color: #26a2cb;
+	color: transparent;
+	padding: 0 0 0 0;
+{: .prettify .linenums .lang-css}
 
 hmmm!
 
 # Here we start to pray cats...!
 
-~~~shell
+```console
 $ git push --hard
-~~~
+```
 {: .bash}
 
 then we do the following steps yepola:

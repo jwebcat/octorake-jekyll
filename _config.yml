@@ -7,7 +7,7 @@ paginate: 10
 
 exclude: [sass]
 
-markdown: redcarpet
+markdown: kramdown
 permalink: pretty
 pygments: true
 
