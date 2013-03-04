@@ -9,15 +9,15 @@ Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
 Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, pl\
 acerat vel vestibulum vel, dapibus quis libero.
 
-~~~css
 background-color: #26a2cb;
 color: transparent;
 padding: 0 0 0 0;
-~~~
+
+hmmm!
 
 # Here we start to pray cats...!
 
-~~~bash
+~~~shell
 $ git push --hard
 ~~~
 {: .bash}
@@ -35,6 +35,6 @@ then we do the following steps yepola:
 
 ##coolest ever.
 
-~~~bash
+```console
 $ ls -la
-~~~
+```

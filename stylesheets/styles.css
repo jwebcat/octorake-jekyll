@@ -8218,7 +8218,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   }
 }
 /* line 65, ../sass/styles.scss */
-code,
+.Coderay, code,
 pre {
   padding: 0 3px 2px;
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -8228,13 +8228,13 @@ pre {
 }
 
 /* line 72, ../sass/styles.scss */
-code {
+.Coderay code, code {
   padding: 2px 4px;
   white-space: nowrap;
 }
 
 /* line 78, ../sass/styles.scss */
-pre {
+.Coderay pre, pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
@@ -8249,11 +8249,11 @@ pre {
   border-radius: 4px;
 }
 /* line 91, ../sass/styles.scss */
-pre.prettyprint {
+.Coderay pre.prettyprint, pre.prettyprint {
   margin-bottom: 20px;
 }
 /* line 96, ../sass/styles.scss */
-pre code {
+.Coderay pre .CodeRay code, .Coderay pre code, pre .CodeRay code, pre code {
   padding: 0;
   color: inherit;
   white-space: pre;
@@ -8263,7 +8263,7 @@ pre code {
 }
 
 /* line 107, ../sass/styles.scss */
-.pre-scrollable {
+.CodeRay .pre-scrollable, .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
 }
