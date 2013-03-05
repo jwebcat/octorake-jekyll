@@ -9,18 +9,23 @@ Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
 Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, pl\
 acerat vel vestibulum vel, dapibus quis libero.
 
-~~~css
-background-color: #26a2cb;
-color: transparent;
-padding: 0 0 0 0;
-~~~
+	coolclass {
+		margin: 0;
+		background-color: #26a2cb;
+		color: transparent;
+		padding: 0 0 0 0;
+		.even-cooler {
+			border: 2px solid #26a2cb;
+		}
+	}
+{: .prettyprint .linenums .lang-css}
+
+hmmm!
 
 # Here we start to pray cats...!
 
-~~~bash
-$ git push --hard
-~~~
-{: .bash}
+	$ git push --hard
+{: .prettyprint .linenums .lang-shell}
 
 then we do the following steps yepola:
 {: .yep}
@@ -35,6 +40,5 @@ then we do the following steps yepola:
 
 ##coolest ever.
 
-~~~bash
-$ ls -la
-~~~
+	$ ls -la
+{: .prettyprint .linenums .lang-terminal}

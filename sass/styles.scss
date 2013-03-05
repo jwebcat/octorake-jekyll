@@ -61,7 +61,7 @@
 
 
 // Inline and block code styles
-code,
+.Coderay, code,
 pre {
   padding: 0 3px 2px;
   @include font-family-monospace;
@@ -69,13 +69,13 @@ pre {
 }
 
 // Inline code
-code {
+.Coderay code, code {
   padding: 2px 4px;
   white-space: nowrap;
 }
 
 // Blocks of code
-pre {
+.Coderay pre, pre {
   display: block;
   padding: ($baseLineHeight - 1) / 2;
   margin: 0 0 $baseLineHeight / 2;
@@ -93,7 +93,7 @@ pre {
   }
 
   // Account for some code outputs that place code tags in pre tags
-  code {
+  .CodeRay code, code {
     padding: 0;
     color: inherit;
     white-space: pre;
@@ -104,7 +104,7 @@ pre {
 }
 
 // Enable scrollable blocks of code
-.pre-scrollable {
+.CodeRay .pre-scrollable, .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
 }
