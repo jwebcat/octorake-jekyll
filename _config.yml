@@ -1,6 +1,7 @@
 name: "jwebcat"
 description: "this is my first jekyll blog"
 
+
 url: "http://localhost:4000"
 
 paginate: 10
@@ -20,7 +21,7 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   use_coderay: false
-  
+
   coderay:
     coderay_wrap: pre
     coderay_line_numbers: table
