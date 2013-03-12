@@ -9,16 +9,17 @@ Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
 Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, pl\
 acerat vel vestibulum vel, dapibus quis libero.
 
-	coolclass {
-		margin: 0;
-		background-color: #26a2cb;
-		color: transparent;
-		padding: 0 0 0 0;
-		.even-cooler {
-			border: 2px solid #26a2cb;
-		}
+{% pretty scss linenums %}
+coolclass {
+	margin: 0;
+	background-color: #26a2cb;
+	color: transparent;
+	padding: 0 0 0 0;
+	.even-cooler {
+		border: 2px solid #26a2cb;
 	}
-{: .prettyprint .linenums .lang-css}
+}
+{% endpretty %}
 
 hmmm!
 
