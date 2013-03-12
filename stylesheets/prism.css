@@ -13,11 +13,11 @@ pre[class*="language-"] {
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
-	
+
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
-	
+
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;
@@ -40,7 +40,7 @@ pre[class*="language-"],
 pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
-	overflow: auto;	
+	overflow: auto;
 	border: .3em solid hsl(30,20%,40%);
 	border-radius: .5em;
 	box-shadow: 1px 1px .5em black inset;
@@ -126,9 +126,9 @@ pre[data-line] {
 	background: -webkit-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
 	background: -o-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
 	background: linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-	
+
 	pointer-events: none;
-	
+
 	line-height: inherit;
 	white-space: pre;
 }
@@ -150,7 +150,7 @@ pre[data-line] {
 		text-shadow: none;
 		box-shadow: 0 1px white;
 	}
-	
+
 	.line-highlight[data-end]:after {
 		content: attr(data-end);
 		top: auto;
@@ -167,11 +167,11 @@ pre[data-line] {
 }
 
 .token.cr:before {
-	content: '␍';
+	content: '';
 }
 
 .token.lf:before {
-	content: '␊';
+	content: '';
 }
 .token a {
 	color: inherit;
