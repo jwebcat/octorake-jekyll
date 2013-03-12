@@ -11,14 +11,14 @@ acerat vel vestibulum vel, dapibus quis libero.
 
 {% prism scss linenums %}
 .coolclass {
-	margin: 0;
-	background-color: #26a2cb;
-	color: transparent;
-	padding: 0 0 0 0;
-	.even-cooler {
-		border: 2px solid #26a2cb;
+		margin: 0;
+		background-color: #26a2cb;
+		color: transparent;
+		padding: 0 0 0 0;
+		.even-cooler {
+			border: 2px solid #26a2cb;
+		}
 	}
-}
 {% endprism %}
 
 hmmm!
