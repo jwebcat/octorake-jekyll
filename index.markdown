@@ -3,7 +3,7 @@ title: Hello, Catz
 layout: default
 ---
 
-# Hello to all the cats in the world!
+# Hello to all the Super Duper Cats in the world!
 
 Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
 Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, pl\
