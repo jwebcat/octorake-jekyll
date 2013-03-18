@@ -3,13 +3,14 @@ title: Hello, Catz
 layout: default
 ---
 
-# Hello to all the cats in the world!
+# Hello to all the Super Duper Cats in the world!
 
 Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
 Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, pl\
 acerat vel vestibulum vel, dapibus quis libero.
 
-	coolclass {
+{% prism scss linenums %}
+.coolclass {
 		margin: 0;
 		background-color: #26a2cb;
 		color: transparent;
@@ -18,7 +19,7 @@ acerat vel vestibulum vel, dapibus quis libero.
 			border: 2px solid #26a2cb;
 		}
 	}
-{: .prettyprint .linenums .lang-css}
+{% endprism %}
 
 hmmm!
 
