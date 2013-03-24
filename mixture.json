@@ -1,0 +1,20 @@
+{
+    "debug": false,
+    "lintScripts": false,
+    "preprocessorLocations": "assets",
+    "preprocessorScriptOutput": "assets/scripts",
+    "preprocessorStyleOutput": "assets/css",
+    "projectName": "jekyll-mix",
+    "projectDescription": "A simple empty boilerplate for a fresh start",
+    "publishedId": null,
+    "serverHostname": null,
+    "serverPort": null,
+    "templateDirectory": "templates",
+    "templateDefaultLayout": "layout",
+    "templateDefaultPage": "index",
+    "type": "mixture",
+    "useCompass": false,
+    "simpleModePartnerServer": "http:localhost:4000",
+    "modelSource": null,
+    "domain": null
+}
