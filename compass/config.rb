@@ -1,5 +1,6 @@
 # Compass configuration file.
 require 'c:/Ruby200/lib/ruby/gems/2.0.0/gems/bootstrap-sass-2.3.0.1/lib/bootstrap-sass.rb'
+require 'c:/Ruby200/lib/ruby/gems/2.0.0/gems/bootstrap-sass-2.3.0.1/lib/bootstrap-sass/compass_functions.rb'
 
 # Please read the docs http://docs.mixture.io/preprocessors#compass, we are working on support for framworks / plugins
 
