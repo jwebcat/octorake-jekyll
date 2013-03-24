@@ -6,10 +6,10 @@ require 'c:/Ruby200/lib/ruby/gems/2.0.0/gems/bootstrap-sass-2.3.0.1/lib/bootstra
 project_path = "/Users/Owner/Desktop/repc4t/jc4t"
 
 # Important! change the paths below to match your project setup
-css_dir = "assets/styles" # update to the path of your css files.
-sass_dir = "assets/styles/sass" # update to the path of your sass files.
+css_dir = "assets/stylesheets" # update to the path of your css files.
+sass_dir = "assets/sass" # update to the path of your sass files.
 images_dir = "assets/images" # update to the path of your image files.
-javascripts_dir = "assets/scripts" # update to the path of your script files.
+javascripts_dir = "assets/javascripts" # update to the path of your script files.
 
 line_comments = false # if debugging (using chrome extension - set this to true)
 cache = true
