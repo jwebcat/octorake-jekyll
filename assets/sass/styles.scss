@@ -59,13 +59,12 @@
 // Code (inline and blocK)
 // --------------------------------------------------
 
-
 // Inline and block code styles
 .Coderay, code,
 pre {
-  padding: 0 3px 2px;
+  padding: 12em 3px 2px;
   @include font-family-monospace;
-  @include border-radius(3px);
+  @include border-radius(13px);
 }
 
 // Inline code
