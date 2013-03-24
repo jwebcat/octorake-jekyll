@@ -14,7 +14,7 @@
     "templateDefaultPage": "index",
     "type": "mixture",
     "useCompass": true,
-    "simpleModePartnerServer": "http:localhost:4000",
+    "simpleModePartnerServer": "http://localhost:4000",
     "modelSource": null,
     "domain": null
 }
