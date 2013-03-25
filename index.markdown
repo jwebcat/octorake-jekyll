@@ -3,7 +3,8 @@ title: Hello, Catz
 layout: default
 ---
 
-# Hello yep to all the  Lets see!!! Super ! Duper !! Duper Duper Cats lets see the world now howza! Yay Wow lets do it!!!
+# Hello there yep to all the  Cats! I can haz happy! YEah !! well there you have it.!!!
+
 
 Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
 Phasellus sodales est nec massa imperdiet commodo. Maecenas risus nulla, pl\

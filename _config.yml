@@ -6,7 +6,7 @@ url: "http://localhost:4000"
 
 paginate: 10
 
-exclude: [sass, stylesheets, mixture.json]
+exclude: [sass, mixture.json]
 
 markdown: kramdown
 permalink: pretty
