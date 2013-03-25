@@ -1,5 +1,9 @@
 # for jekyll yep
 _site/
+.pygments-cache
 
 # for compass and sass
 .sass-cache
+
+# for mixture
+.pid

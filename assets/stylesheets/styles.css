@@ -6996,9 +6996,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     overflow: visible !important;
   }
 }
+body {
+  background: black !important;
+}
+
 .Coderay, code,
 pre {
-  padding: 12em 3px 2px;
+  padding: 2em 3px 2px;
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
