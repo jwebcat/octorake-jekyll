@@ -1,2 +1,2 @@
-server: http-server _site
+serve: http-server _site
 jekyll: jekyll build -w
