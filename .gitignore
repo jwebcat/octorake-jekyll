@@ -7,3 +7,6 @@ _site/
 
 # for mixture
 .pid
+
+# for nodejs
+node_modules

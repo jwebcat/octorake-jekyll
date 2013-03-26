@@ -1,8 +1,7 @@
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-shell');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     watch: {
       jekyllSources: {
         files: [
@@ -13,27 +12,43 @@ module.exports = function(grunt) {
           '_layouts/**', '_plugins/**', '*.markdown'
 
           ],
-        tasks: 'shell:jekyll',
-      }
+        tasks: ['shell:jekyll', 'copy:main'],
+      },
+      css: {
+        files: ['assets/stylesheets/*.css'],
+        tasks: ['copy:main'],
+      },
     },
     copy: {
-      css : {
-        files: {
-          // Copy the less-generated style file to
+      main : {
+        files: [
+          // Copy the sass-generated css files to
           // the _site/ folder
-          '_site/assets/stylesheets/*.css': 'assets/stylesheets/*.css'
+          {src: ['assets/stylesheets/*.css'], dest: '_site/'},
+        ]
+      },
+    },
+    shell: {
+      jekyll: {
+        command: 'jekyll --limit_posts 2',
+        options: {
+          stdout: true
+        }
+      },
+      server: {
+        command: 'http-server _site',
+        options: {
+          stdout: true
         }
       }
     },
-  shell: {
-      jekyll: {
-          command: 'rm -rf _site/*; jekyll',
-          stdout: true
-      }
-  },
 
   });
+
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   // Default task.
-  grunt.registerTask('default', 'watch');
+  grunt.registerTask('default', ['watch']);
 
 };
