@@ -14,7 +14,7 @@
     "templateDefaultPage": "index",
     "type": "simple",
     "useCompass": true,
-    "simpleModePartnerServer": "localhost:4000",
+    "simpleModePartnerServer": "localhost:8080",
     "modelSource": null,
     "domain": null
 }
