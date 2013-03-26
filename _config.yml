@@ -5,7 +5,7 @@ description: "this is my first jekyll blog"
 url: "http://localhost:4000"
 
 paginate: 10
-
+auto: true
 exclude: [sass, stylesheets]
 
 markdown: kramdown
