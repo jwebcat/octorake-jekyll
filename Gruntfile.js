@@ -100,7 +100,7 @@ module.exports = function(grunt) {
                   stdout: true
                 }
             },
-            server: {
+            compass: {
                 command: 'http-server _site',
                   options: {
                     stdout: true
@@ -109,6 +109,7 @@ module.exports = function(grunt) {
         },
 
         // regarde to watch for changes and trigger compass, jshint, uglify, jekyll and live reload
+
         regarde: {
             compass: {
                 files: '_sass/*.scss',
@@ -127,6 +128,16 @@ module.exports = function(grunt) {
                   '_layouts/**', '_plugins/**', '*.markdown'
                   ],
                 tasks: ['shell:jekyll', 'livereload']
+            },
+            watchjekyll: {
+                files: [
+                  // capture all except css - add your own
+                  '*.html', '*.yml', 'assets/javascripts/**.js',
+                  '_posts/**', '_includes/**', '*.json',
+                  'assets/images/**', 'compass/**', '*.md',
+                  '_layouts/**', '_plugins/**', '*.markdown'
+                  ],
+                tasks: ['shell:jekyll']
             }
         },
 
@@ -194,8 +205,7 @@ module.exports = function(grunt) {
         'livereload-start',
         'connect',
         'compass',
-        'uglify',
-        'regarde'
+        'regarde:watchjekyll'
     ]);
 
 };
