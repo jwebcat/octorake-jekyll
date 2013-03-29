@@ -75,27 +75,10 @@ task :preview do
   [jekyllPid, livereloadPid].each { |pid| Process.wait(pid) }
 end
 
-desc "preview the site in a web browser"
-task :fastgrunt do
-  raise "### you haven't made the jekyll body. make it happen clone jekyll roots from github" unless File.directory?(source_dir)
-  puts "Starting to watch source with Jekyll and Compass. Starting Live reload and connect on port 8000"
-  system "compass compile --css-dir #{source_dir}/#{stylesheets_dir} --sass-dir #{source_dir}/#{sass_dir}" unless File.exist?("#{source_dir}/#{stylesheets_dir}/styles.css")
-  jekyllPid = Process.spawn("jekyll build")
-  compassPid = Process.spawn("compass watch")
-  livereloadPid = Process.spawn({"GRUNT_ENV"=>"grunt"}, "grunt raken")
-
-  trap("INT") {
-    [jekyllPid, livereloadPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
-    exit 0
-  }
-
-  [jekyllPid, livereloadPid].each { |pid| Process.wait(pid) }
-end
-
 desc "preview the site with grunt and live reload in a web browser go see on port 9000"
 task :livegrunt do
   raise "### you haven't made the jekyll body. make it happen clone jekyll roots from github" unless File.directory?(source_dir)
-  puts "cooking the sass with compass and baking jekyll"
+  puts "cooking the sass with compass ... bakin jekyll nice and toasty"
   system "compass compile --css-dir #{source_dir}/#{stylesheets_dir} --sass-dir #{source_dir}/#{sass_dir}" unless File.exist?("#{source_dir}/#{stylesheets_dir}/styles.css")
   jekyllPid = Process.spawn("jekyll build")
   puts "starting up grunty sit back and enjoy take a look on localhost:9000"
