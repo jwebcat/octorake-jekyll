@@ -70,14 +70,14 @@ module.exports = function(grunt) {
                     sourceMap: 'assets/js/map/source-map.js'
                 },
                 files: {
-                    'assets/javascripts/plugins.min.js': [
-                        'assets/javascripts/bootstrap-*.js',
+                    'assets/js/plugins.min.js': [
+                        'assets/js/bootstrap-*.js',
                     ],
                     'assets/js/main.min.js': [
-                        'assets/javascripts/prism*.js'
+                        'assets/js/prism*.js'
                     ],
                     'assets/js/donuts.min.js': [
-                        'assets/javascripts/donuts*.js'
+                        'assets/js/donuts*.js'
                     ]
                 }
             }
