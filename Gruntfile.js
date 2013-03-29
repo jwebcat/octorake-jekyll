@@ -88,7 +88,7 @@ module.exports = function(grunt) {
         compass: {
             dist: {
                 options: {
-                    config: 'compass/config.rb',
+                    config: 'config.rb',
                     force: true
                 }
             }
@@ -180,13 +180,21 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-rsync');
 
-    // register task
+    // register default task
     grunt.registerTask('default', [
         'livereload-start',
         'connect',
         'jshint',
         'compass',
         'uglify',
+        'regarde'
+    ]);
+
+    // register task
+    grunt.registerTask('rake', [
+        'livereload-start',
+        'connect',
+        'compass',
         'regarde'
     ]);
 

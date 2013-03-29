@@ -1,9 +1,5 @@
 # Compass configuration file.
-require 'c:/Ruby200/lib/ruby/gems/2.0.0/gems/bootstrap-sass-2.3.0.1/lib/bootstrap-sass.rb'
-
-# Please read the docs http://docs.mixture.io/preprocessors#compass, we are working on support for framworks / plugins
-
-project_path = "/Users/Owner/Desktop/repc4t/jc4t"
+require 'bootstrap-sass'
 
 # Important! change the paths below to match your project setup
 css_dir = "_site/assets/stylesheets" # update to the path of your css files.

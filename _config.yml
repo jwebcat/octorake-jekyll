@@ -1,11 +1,11 @@
 name: "jwebcat"
-description: "this is my first jekyll blog"
+description: "A Nicely Baked Jekyll Blog"
 
 
-url: "http://localhost:4000"
+url: http://jwebcat.github.com/octorake-jekyll
 
 paginate: 10
-exclude: [sass, node_modules]
+exclude: [node_modules]
 
 markdown: kramdown
 permalink: pretty
