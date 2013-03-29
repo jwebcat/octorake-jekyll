@@ -59,8 +59,7 @@ module.exports = function(grunt) {
                 "force": true
             },
             all: [
-                'Gruntfile.js',
-                'assets/js/source/**/*.js'
+                'Gruntfile.js', // add more scripts here if you wish to lint them
             ]
         },
 
@@ -190,11 +189,12 @@ module.exports = function(grunt) {
         'regarde'
     ]);
 
-    // register task
-    grunt.registerTask('rake', [
+    // register task without js linting
+    grunt.registerTask('raken', [
         'livereload-start',
         'connect',
         'compass',
+        'uglify',
         'regarde'
     ]);
 
