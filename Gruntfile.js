@@ -122,9 +122,9 @@ module.exports = function(grunt) {
             jekyll: {
                 files: [
                   // capture all except css - add your own
-                  '*.html', '*.yml', 'assets/javascripts/**.js',
+                  '*.html', '*.yml', 'assets/js/**.js',
                   '_posts/**', '_includes/**', '*.json',
-                  'assets/images/**', 'compass/**', '*.md',
+                  'assets/images/**', '*.md',
                   '_layouts/**', '_plugins/**', '*.markdown'
                   ],
                 tasks: ['shell:jekyll', 'livereload']
@@ -132,9 +132,9 @@ module.exports = function(grunt) {
             watchjekyll: {
                 files: [
                   // capture all except css - add your own
-                  '*.html', '*.yml', 'assets/javascripts/**.js',
+                  '*.html', '*.yml', 'assets/js/**.js',
                   '_posts/**', '_includes/**', '*.json',
-                  'assets/images/**', 'compass/**', '*.md',
+                  'assets/images/**', '*.md',
                   '_layouts/**', '_plugins/**', '*.markdown'
                   ],
                 tasks: ['shell:jekyll']
