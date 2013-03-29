@@ -12,6 +12,7 @@ deploy_default = "push"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
+master_branch  = "master"
 
 
 ## -- Misc Configs -- ##
@@ -225,6 +226,19 @@ end
 
 desc "Generate website and deploy"
 task :gen_deploy => [:integrate, :generate, :deploy] do
+end
+
+desc "commit core source files on master and push to github master"
+task :push_core do
+  puts "## adding all files to stage "
+  system "git add ."
+    system "git add -u"
+    puts "\n## Commiting: Site updated at #{Time.now.utc}"
+    message = "Site updated at #{Time.now.utc}"
+    system "git commit -m \"#{message}\""
+    puts "\n## Pushing commit to master on github"
+    system "git push origin #{master_branch} --force"
+    puts "\n## Github master push complete, go have a bit of fun, you deserve it "
 end
 
 desc "copy dot files for deployment"
