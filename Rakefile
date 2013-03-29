@@ -3,22 +3,25 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
-ssh_port       = "22"
-document_root  = "~/website.com/"
-rsync_delete   = false
-rsync_args     = ""  # Any extra arguments to pass to rsync
-deploy_default = "push"
+ssh_user        = "user@domain.com"
+ssh_port        = "22"
+document_root   = "~/website.com/"
+rsync_delete    = false
+rsync_args      = ""  # Any extra arguments to pass to rsync
+deploy_default  = "push"
 
 # This will be configured for you when you run config_deploy
-deploy_branch  = "gh-pages"
-master_branch  = "master"
+deploy_branch   = "gh-pages"
+master_branch   = "master"
 
+# Editor of choice
+choice_editor   = "subl"
 
 ## -- Misc Configs -- ##
 
 public_dir      = "_site"    # compiled site directory
 source_dir      = Dir.pwd    # source file directory
+pages_dir       = "Dir.pwd"
 deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
@@ -63,7 +66,7 @@ end
 desc "preview the site in a web browser"
 task :preview do
   raise "### you haven't made the jekyll body. make it happen clone jekyll roots from github" unless File.directory?(source_dir)
-  puts "Starting to watch source with Jekyll and grunt with compass baked in. Starting Live reload and connect on port 8000"
+  puts "Starting to watch source with Jekyll and grunt with compass baked in. Starting Live reload server on port 9000"
   system "compass compile --css-dir #{source_dir}/#{stylesheets_dir} --sass-dir #{source_dir}/#{sass_dir}" unless File.exist?("#{source_dir}/#{stylesheets_dir}/styles.css")
   jekyllPid = Process.spawn("jekyll build")
   livereloadPid = Process.spawn({"GRUNT_ENV"=>"grunt"}, "grunt")
@@ -76,7 +79,7 @@ task :preview do
   [jekyllPid, livereloadPid].each { |pid| Process.wait(pid) }
 end
 
-desc "preview the site with grunt and live reload in a web browser go see on port 9000"
+desc "preview the site with grunt and live reload in a web browser go see localhost on port 8000"
 task :livegrunt do
   raise "### you haven't made the jekyll body. make it happen clone jekyll roots from github" unless File.directory?(source_dir)
   puts "cooking the sass with compass ... bakin jekyll nice and toasty"
@@ -145,18 +148,18 @@ task :iso_post, :title do |t, args|
   Rake::Task[:isolate].invoke(file_name)
   puts "running isolate on " + file_name
   puts "your post ... we got " + file_name + " isolated and baked fer cookin..."
-  exec "subl #{filename}"
+  exec "#{choice_editor} #{filename}"
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
-desc "Create a new page in #{source_dir}/(filename)/index.#{new_page_ext}"
+desc "Create a new page in (filename)/index.#{new_page_ext}"
 task :new_page, :filename do |t, args|
   args.with_defaults(:filename => 'new-page')
-  page_dir = [source_dir]
+  page_dir = [Dir.pwd]
   if args.filename.downcase =~ /(^.+\/)?(.+)/
     filename, dot, extension = $2.rpartition('.').reject(&:empty?)         # Get filename and extension
     title = filename
-    page_dir.concat($1.downcase.sub(/^\//, '').split('/')) unless $1.nil?  # Add path to page_dir Array
+    page_dir.concat($1.downcase.sub(/^\//, '')) unless $1.nil?  # Add path to page_dir Array
     if extension.nil?
       page_dir << filename
       filename = "index"
@@ -178,7 +181,6 @@ task :new_page, :filename do |t, args|
       page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
       page.puts "comments: true"
       page.puts "sharing: true"
-      page.puts "footer: true"
       page.puts "---"
     end
   else
