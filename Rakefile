@@ -21,7 +21,6 @@ choice_editor   = "subl"
 
 public_dir      = "_site"    # compiled site directory
 source_dir      = Dir.pwd    # source file directory
-pages_dir       = "Dir.pwd"
 deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
@@ -123,7 +122,7 @@ end
 
 # usage rake iso_post[my-iso-post] or rake iso_post['my iso post'] or rake iso_post (defaults to "new-post")
 desc "Begin a new post in #{source_dir}/#{posts_dir}"
-task :iso_post, :title do |t, args|
+multitask :iso_post, :title do |t, args|
   if args.title
     title = args.title
   else
@@ -147,7 +146,7 @@ task :iso_post, :title do |t, args|
   file_name = "#{filename}"
   Rake::Task[:isolate].invoke(file_name)
   puts "running isolate on " + file_name
-  puts "your post ... we got " + file_name + " isolated and baked fer cookin..."
+  puts "your post ... we got " + file_name + " isolated and baked and cookin..."
   exec "#{choice_editor} #{filename}"
 end
 
