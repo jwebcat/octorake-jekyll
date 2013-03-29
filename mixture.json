@@ -1,0 +1,20 @@
+{
+    "debug": false,
+    "lintScripts": false,
+    "preprocessorLocations": "assets",
+    "preprocessorScriptOutput": "_site/assets/javascripts",
+    "preprocessorStyleOutput": "_site/assets/stylesheets",
+    "projectName": "jekyll-cat",
+    "projectDescription": "a jekyll mixture",
+    "publishedId": null,
+    "serverHostname": null,
+    "serverPort": null,
+    "templateDirectory": "templates",
+    "templateDefaultLayout": "layout",
+    "templateDefaultPage": "index",
+    "type": "simple",
+    "useCompass": true,
+    "simpleModePartnerServer": "localhost:8080",
+    "modelSource": null,
+    "domain": null
+}
