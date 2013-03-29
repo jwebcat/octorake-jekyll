@@ -238,7 +238,7 @@ task :push_core do
     system "git commit -m \"#{message}\""
     puts "\n## Pushing commit to master on github"
     system "git push origin #{master_branch} --force"
-    puts "\n## Github master push complete, go have a bit of fun, you deserve it "
+    puts "\n## Github push to master complete, go have a bit of fun, you deserve it "
 end
 
 desc "copy dot files for deployment"
