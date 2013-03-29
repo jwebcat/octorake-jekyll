@@ -5,6 +5,7 @@
  *
  * @author @MoOx
  */
+/* line 39, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   -moz-tab-size: 4;
@@ -25,17 +26,20 @@ pre[class*="language-"] {
   text-shadow: 0 1px 0 black;
 }
 
+/* line 65, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
   background: #2a2a2a;
 }
 
+/* line 70, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 pre[class*="language-"] {
   padding: 12px;
   border-radius: 5px;
   border: 1px solid #e1e1e8;
 }
 
+/* line 89, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 :not(pre) > code[class*="language-"] {
   padding: 0.15em 0.2em 0.05em;
   border-radius: .3em;
@@ -43,46 +47,60 @@ pre[class*="language-"] {
   box-shadow: 1px 1px 0.3em -0.1em black inset;
 }
 
+/* line 96, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .namespace {
   opacity: .7;
 }
 
+/* line 104, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.comment, .token.prolog, .token.doctype, .token.cdata {
   color: #6f705e;
 }
+/* line 111, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.null, .token.operator, .token.boolean, .token.number {
   color: #a77afe;
 }
+/* line 116, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.attr-name, .token.string {
   color: #e6d06c;
 }
+/* line 123, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.entity, .token.url, .language-css .token.string, .style .token.string {
   color: #e6d06c;
 }
+/* line 127, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.selector {
   color: #a6e22d;
 }
+/* line 137, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.atrule, .token.attr-value, .token.keyword, .token.control, .token.directive, .token.important, .token.unit {
   color: #f12770;
 }
+/* line 142, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.regex, .token.statement {
   color: #76d9e6;
 }
+/* line 147, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.placeholder, .token.variable {
   color: white;
 }
+/* line 152, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.property, .token.tag {
   font-style: italic;
 }
+/* line 157, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.important, .token.statement {
   font-weight: bold;
 }
+/* line 180, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.punctuation {
   color: #bebec5;
 }
+/* line 184, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.entity {
   cursor: help;
 }
+/* line 189, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/prism-monokai.scss */
 .token.debug {
   color: red;
 }

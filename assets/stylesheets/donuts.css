@@ -1,3 +1,4 @@
+/* line 8, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .donut {
   position: relative;
   display: inline-block;
@@ -9,12 +10,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+/* line 17, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .donut.donut-big {
   font-size: 62px;
 }
+/* line 21, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .donut.donut-small {
   font-size: 17px;
 }
+/* line 25, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .donut:before {
   content: '';
   position: absolute;
@@ -31,6 +35,7 @@
   border-radius: 100%;
   clip: rect(auto, auto, 1em, auto);
 }
+/* line 38, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .donut .donut-arrow {
   height: 1em;
   width: .1em;
@@ -45,6 +50,7 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+/* line 49, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .donut .donut-arrow, .donut .donut-arrow:before {
   position: absolute;
   display: inline-block;
@@ -54,6 +60,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+/* line 57, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .donut .donut-arrow:before {
   content: '';
   height: .2em;
@@ -65,18 +72,22 @@
   border-radius: 100%;
 }
 
+/* line 68, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .red.donut:before {
   border-color: #cc6866;
 }
 
+/* line 72, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .orange.donut:before {
   border-color: #cc8f66;
 }
 
+/* line 76, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .yellow.donut:before {
   border-color: #ccc366;
 }
 
+/* line 80, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/donuts.scss */
 .green.donut:before {
   border-color: #66cc74;
 }

@@ -3,6 +3,7 @@
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
  * @author ocodia
  */
+/* line 8, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
@@ -22,23 +23,27 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
+/* line 28, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 pre[class*="language-"] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
 }
 
+/* line 35, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #272822;
 }
 
 /* Inline code */
+/* line 40, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em;
 }
 
+/* line 48, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -46,30 +51,36 @@ pre[class*="language-"] {
   color: slategray;
 }
 
+/* line 52, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.punctuation {
   color: #f8f8f2;
 }
 
+/* line 56, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .namespace {
   opacity: .7;
 }
 
+/* line 61, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.property,
 .token.tag {
   color: #f92672;
 }
 
+/* line 66, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.boolean,
 .token.number {
   color: #ae81ff;
 }
 
+/* line 72, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.selector,
 .token.attr-name,
 .token.string {
   color: #a6e22e;
 }
 
+/* line 81, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -78,24 +89,29 @@ pre[class*="language-"] {
   color: #f8f8f2;
 }
 
+/* line 87, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.atrule,
 .token.attr-value {
   color: #e6db74;
 }
 
+/* line 92, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.keyword {
   color: #f92672;
 }
 
+/* line 97, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.regex,
 .token.important {
   color: #fd971f;
 }
 
+/* line 101, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.important {
   font-weight: bold;
 }
 
+/* line 105, c:/Users/Owner/Desktop/repc4t/jc4t/_sass/okaidia.scss */
 .token.entity {
   cursor: help;
 }
