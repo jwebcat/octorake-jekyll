@@ -112,7 +112,7 @@ module.exports = function(grunt) {
         // regarde to watch for changes and trigger compass, jshint, uglify, jekyll and live reload
         regarde: {
             compass: {
-                files: 'assets/sass/**/*',
+                files: '_sass/*.scss',
                 tasks: ['compass', 'livereload']
             },
             js: {

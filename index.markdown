@@ -3,7 +3,7 @@ title: Hello, Catz
 layout: default
 ---
 
-# Hello  wow your yep the best! what a nice day there yep !to all the  Cats! I can haz happy! YEah !! well there you have it we did it.!!!
+# Hello  wow yay! your yep the best! what a nice day there yep !to all the  Cats! I can haz happy! YEah !! well there you have it we did it.!!!
 
 
 Proin eleifend libero accumsan felis luctus nec consectetur purus commodo. \
