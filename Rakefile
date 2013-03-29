@@ -22,7 +22,7 @@ deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
 sass_dir        = "_sass" # directory for sass files
-stylesheets_dir = "assets/stylesheets" # directory for css files
+stylesheets_dir = "_site/assets/stylesheets" # directory for css files
 # themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "md"  # default new post file extension when using the new_post task
 new_page_ext    = "md"  # default new page file extension when using the new_page task
@@ -45,31 +45,51 @@ task :watch do
   raise "### you haven't made the jekyll body. make it happen clone jekyll roots from github" unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass."
   system "compass compile --css-dir #{source_dir}/#{stylesheets_dir} --sass-dir #{source_dir}/#{sass_dir}" unless File.exist?("#{source_dir}/#{stylesheets_dir}/styles.css")
-  jekyllPid = Process.spawn({"JEKYLL_ENV"=>"preview"}, "jekyll build -w")
+  puts "baking jekyll nicely"
+  jekyllPid = Process.spawn({"JEKYLL_ENV"=>"preview"}, "jekyll build")
   compassPid = Process.spawn("compass watch")
+  gruntPid = Process.spawn({"GRUNT_ENV"=>"grunt"}, "grunt regarde:watchjekyll")
+
 
   trap("INT") {
-    [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    [jekyllPid, gruntPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
 
-  [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
+  [jekyllPid, gruntPid, compassPid].each { |pid| Process.wait(pid) }
 end
 
 desc "preview the site in a web browser"
 task :preview do
   raise "### you haven't made the jekyll body. make it happen clone jekyll roots from github" unless File.directory?(source_dir)
-  puts "Starting to watch source with Jekyll and Compass. Starting Live reload and connect on port 8000"
+  puts "Starting to watch source with Jekyll and grunt with compass baked in. Starting Live reload and connect on port 8000"
   system "compass compile --css-dir #{source_dir}/#{stylesheets_dir} --sass-dir #{source_dir}/#{sass_dir}" unless File.exist?("#{source_dir}/#{stylesheets_dir}/styles.css")
   jekyllPid = Process.spawn("jekyll build")
   livereloadPid = Process.spawn({"GRUNT_ENV"=>"grunt"}, "grunt")
 
   trap("INT") {
-    [jekyllPid, compassPid, livereloadPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    [jekyllPid, livereloadPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
 
-  [jekyllPid, compassPid, livereloadPid].each { |pid| Process.wait(pid) }
+  [jekyllPid, livereloadPid].each { |pid| Process.wait(pid) }
+end
+
+desc "preview the site in a web browser"
+task :fastgrunt do
+  raise "### you haven't made the jekyll body. make it happen clone jekyll roots from github" unless File.directory?(source_dir)
+  puts "Starting to watch source with Jekyll and Compass. Starting Live reload and connect on port 8000"
+  system "compass compile --css-dir #{source_dir}/#{stylesheets_dir} --sass-dir #{source_dir}/#{sass_dir}" unless File.exist?("#{source_dir}/#{stylesheets_dir}/styles.css")
+  jekyllPid = Process.spawn("jekyll build")
+  compassPid = Process.spawn("compass watch")
+  livereloadPid = Process.spawn({"GRUNT_ENV"=>"grunt"}, "grunt raken")
+
+  trap("INT") {
+    [jekyllPid, livereloadPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    exit 0
+  }
+
+  [jekyllPid, livereloadPid].each { |pid| Process.wait(pid) }
 end
 
 desc "preview the site with grunt and live reload in a web browser go see on port 9000"

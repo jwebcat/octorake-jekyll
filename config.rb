@@ -12,3 +12,11 @@ javascripts_dir = "assets/javascripts" # update to the path of your script files
 line_comments = false # if debugging (using chrome extension - set this to true)
 cache = true
 # output_style = :compressed
+
+require 'fileutils'
+on_stylesheet_saved do |file|
+  if File.exists?(file) && File.basename(file) == "*.css"
+    puts "Moving: #{file}"
+    system "grunt live:reload"
+  end
+end
