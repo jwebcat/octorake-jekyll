@@ -242,6 +242,21 @@ task :push_core do
     puts "\n## Github push to master complete, go have a bit of fun, you deserve it "
 end
 
+desc "set master as default merge and push for origin/master"
+task :master_config_push do
+  puts "adding all files in master to stage"
+  system "git add ."
+    system "git add -u"
+    puts "\n## Commiting: Site updated at #{Time.now.utc}"
+    message "Site commited updated at #{Time.now.utc}"
+    system "git commit -m \"#{message}\""
+    puts "\n## Configuring origin/master and master to track eachother by default... how fun"
+    system "git config branch.#{master_branch}.remote origin"
+    puts "\n## Pushing Commit to master on github"
+    system "git push origin #{master_branch} --force"
+    puts "Jekyll has been baked nicely and your commit has been served to github thanks for playing along"
+end
+
 desc "copy dot files for deployment"
 task :copydot, :source, :dest do |t, args|
   FileList["#{args.source}/**/.*"].exclude("**/.", "**/..", "**/.DS_Store", "**/._*").each do |file|
@@ -272,9 +287,9 @@ multitask :push do
     puts "\n## Commiting: Site updated at #{Time.now.utc}"
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m \"#{message}\""
-    puts "\n## Pushing generated #{deploy_dir} website"
+    puts "\n## Pushing baked #{deploy_dir} website"
     system "git push origin #{deploy_branch} --force"
-    puts "\n## Github Pages deploy complete"
+    puts "\n## Github Pages deploy complete ...  go and enjoy yourself some "
   end
 end
 
@@ -325,9 +340,9 @@ task :setup_github_pages, :repo do |t, args|
   user = repo_url.match(/:([^\/]+)/)[1]
   branch = (repo_url.match(/\/[\w-]+\.github\.com/).nil?) ? 'gh-pages' : 'master'
   project = (branch == 'gh-pages') ? repo_url.match(/\/([^\.]+)/)[1] : ''
-  unless (`git remote -v` =~ /origin.+?hub(?:\.git)?/).nil?
+  unless (`git remote -v` =~ /origin.+?source(?:\.git)?/).nil?
     # If octopress is still the origin remote (from cloning) rename it to octopress
-    system "git remote rename origin hub"
+    system "git remote rename origin source"
     if branch == 'master'
       # If this is a user/organization pages repository, add the correct origin remote
       # and checkout the source branch for committing changes to the blog source.
